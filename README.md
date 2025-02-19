@@ -52,18 +52,21 @@ my-playwright-ts/ ├── .env ├── package.json ├── playwright.con
 
 ## Explanation of the Test Flow
 Page Object Model (POM):
-The login actions are encapsulated in page-objects/loginPage.ts. This includes methods for:
+The login actions are encapsulated in page-objects/loginPage.ts. 
 
-Navigating to the home page (using the BASE_URL defined in the configuration)
-Clicking the "Login" link
-Entering the username and password (retrieved from environment variables)
-Clicking the "Login" button
-Verifying that the "Logout" element is visible, indicating a successful login
-Test Script:
+## This includes methods for:
+1. Navigating to the home page (using the BASE_URL defined in the configuration)
+2. Clicking the "Login" link
+3. Entering the username and password (retrieved from environment variables)
+4. Clicking the "Login" button
+5. Verifying that the "Logout" element is visible, indicating a successful login
+
+   
+## Test Script:
 The test in tests/login.spec.ts creates an instance of the LoginPage class and calls its methods to perform the following steps:
 
-Visit the homepage.
-Click the login link to navigate to the login page.
-Enter valid credentials.
-Click the login button.
-Wait for the "Logout" element to appear to confirm that the login was successful.
+1. Visit the homepage.
+2. Click the login link to navigate to the login page.
+3. Enter valid credentials.
+4. Click the login button.
+5. Wait for the "Logout" element to appear to confirm that the login was successful.
